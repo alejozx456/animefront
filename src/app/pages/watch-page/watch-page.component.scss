@@ -1,0 +1,10 @@
+::ng-deep .mat-tab-label {
+  color: #ffffff; /* Color de texto de las etiquetas no seleccionadas */
+}
+
+::ng-deep .mat-tab-label-active {
+  color: #ff4081; /* Color de la etiqueta activa */
+}
+::ng-deep .mat-ink-bar {
+  background-color: #ff4081; /* Color de la barra de selección debajo de la etiqueta activa */
+}

@@ -1,0 +1,155 @@
+
+    <div *ngIf="animeData"
+      class="relative flex size-full min-h-screen flex-col bg-[#111118] dark group/design-root overflow-x-hidden"
+      style='font-family: "Be Vietnam Pro", "Noto Sans", sans-serif;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/sdxl10/3c260577-33f1-45cf-b826-ce57b63c3f3c.png");'
+                >
+                  <div  class="flex flex-col gap-2 text-left">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      {{animeData.id}}
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                       {{animeData.debut}} • {{animeData.episodes.length}}
+                    </h2>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#1919e6] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">Watch S1 E1</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-3 px-4 py-3">
+              <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#3c3c53] p-3 items-center text-center">
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">{{animeData.rating}}</p>
+                <div class="flex items-center gap-2"><p class="text-[#9d9db8] text-sm font-normal leading-normal">Average Rating</p></div>
+              </div>
+              <div class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#3c3c53] p-3 items-center text-center">
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">{{animeData.episodes.length}}</p>
+                <div class="flex items-center gap-2"><p class="text-[#9d9db8] text-sm font-normal leading-normal">Episodes</p></div>
+              </div>
+
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Synopsis</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              {{animeData.synopsis}}
+            </p>
+            <div class="flex flex-wrap gap-x-8 gap-y-6 p-4">
+              <div class="flex flex-col gap-2">
+                <p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">4.8</p>
+                <div class="flex gap-0.5">
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="text-white" data-icon="Star" data-size="18px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-white text-base font-normal leading-normal">26 reviews</p>
+              </div>
+              <div class="grid min-w-[200px] max-w-[400px] flex-1 grid-cols-[20px_1fr_40px] items-center gap-y-3">
+                <p class="text-white text-sm font-normal leading-normal">5</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#3c3c53]"><div class="rounded-full bg-white" style="width: 92%;"></div></div>
+                <p class="text-[#9d9db8] text-sm font-normal leading-normal text-right">92%</p>
+                <p class="text-white text-sm font-normal leading-normal">4</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#3c3c53]"><div class="rounded-full bg-white" style="width: 8%;"></div></div>
+                <p class="text-[#9d9db8] text-sm font-normal leading-normal text-right">8%</p>
+                <p class="text-white text-sm font-normal leading-normal">3</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#3c3c53]"><div class="rounded-full bg-white" style="width: 0%;"></div></div>
+                <p class="text-[#9d9db8] text-sm font-normal leading-normal text-right">0%</p>
+                <p class="text-white text-sm font-normal leading-normal">2</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#3c3c53]"><div class="rounded-full bg-white" style="width: 0%;"></div></div>
+                <p class="text-[#9d9db8] text-sm font-normal leading-normal text-right">0%</p>
+                <p class="text-white text-sm font-normal leading-normal">1</p>
+                <div class="flex h-2 flex-1 overflow-hidden rounded-full bg-[#3c3c53]"><div class="rounded-full bg-white" style="width: 0%;"></div></div>
+                <p class="text-[#9d9db8] text-sm font-normal leading-normal text-right">0%</p>
+              </div>
+            </div>
+            <!-- <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">You May Also Like</h2> -->
+
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Episodes</h2>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-xl border border-[#3c3c53] bg-[#111118]">
+
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-[#1c1c26]">
+                      <th class="table-54656446-4264-4b6f-a814-8092875ac3c3-column-120 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">#</th>
+                      <th class="table-54656446-4264-4b6f-a814-8092875ac3c3-column-240 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Title</th>
+                      <th class="table-54656446-4264-4b6f-a814-8092875ac3c3-column-360 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Duration</th>
+                      <th class="table-54656446-4264-4b6f-a814-8092875ac3c3-column-480 px-4 py-3 text-left text-white w-60 text-[#9d9db8] text-sm font-medium leading-normal">
+                        Watch
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let anime of animeData.episodes; index as i" class="border-t border-t-[#3c3c53]">
+                      <td class="table-54656446-4264-4b6f-a814-8092875ac3c3-column-120 h-[72px] px-4 py-2 w-[400px] text-[#9d9db8] text-sm font-normal leading-normal">{{anime.id}}</td>
+                      <td class="table-54656446-4264-4b6f-a814-8092875ac3c3-column-240 h-[72px] px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">Episodio {{anime.id}}</td>
+                      <td class="table-54656446-4264-4b6f-a814-8092875ac3c3-column-360 h-[72px] px-4 py-2 w-[400px] text-[#9d9db8] text-sm font-normal leading-normal">24m</td>
+                      <td class="table-54656446-4264-4b6f-a814-8092875ac3c3-column-480 h-[72px] px-4 py-2 w-60 text-[#9d9db8] text-sm font-bold leading-normal tracking-[0.015em]">
+                        <button (click)="openDialog(anime.anime,anime.id)"
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#1919e6] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                      >
+                        <span class="truncate">ver</span>
+                      </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+              </div>
+              <style>
+                          @container(max-width:120px){.table-8d9b152a-c4ca-4e36-8c69-2548ade8cc25-column-120{display: none;}}
+                @container(max-width:240px){.table-8d9b152a-c4ca-4e36-8c69-2548ade8cc25-column-240{display: none;}}
+                @container(max-width:360px){.table-8d9b152a-c4ca-4e36-8c69-2548ade8cc25-column-360{display: none;}}
+                @container(max-width:480px){.table-8d9b152a-c4ca-4e36-8c69-2548ade8cc25-column-480{display: none;}}
+                @container(max-width:600px){.table-8d9b152a-c4ca-4e36-8c69-2548ade8cc25-column-600{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

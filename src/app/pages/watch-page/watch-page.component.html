@@ -1,0 +1,26 @@
+<div
+      class="relative flex size-full min-h-screen flex-col bg-[#111118] dark group/design-root overflow-x-hidden"
+      style='font-family: "Be Vietnam Pro", "Noto Sans", sans-serif;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+
+                <mat-tab-group *ngIf="asyncTabs | async as tabs">
+                  <mat-tab
+                    *ngFor="let tab of tabs" [label]="tab.label">
+                    <iframe width="650" height="315"
+                    [src]="tab.content" frameborder="0" allowfullscreen></iframe>
+                  </mat-tab>
+                </mat-tab-group>
+
+
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">{{data.serie}}  {{data.episodio}}</h2>
+
+      </div>
+    </div>
+
