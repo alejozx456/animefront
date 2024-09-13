@@ -11,16 +11,10 @@ import { WatchModel } from '../models/watch.interface';
 export class ApiAnimeService {
 
  // API = 'http://192.168.100.33:5000';
- API = 'https://api-anime2.onrender.com';
+ API = '';
 
   constructor(private http: HttpClient) { }
 
-  // getAnimes(query: string): Observable<AnimeModel[]> {
-  //   //const body={query};
-  //   let params = new HttpParams()
-  //     .set('query', query);
-  //   return this.http.get<AnimeModel[]>(this.API + '/search', { params })
-  // }
 
   getAnimes(query:string):Observable<AnimeModel[]>{
     const headers=new HttpHeaders({
@@ -33,8 +27,7 @@ export class ApiAnimeService {
   }
 
   getTitleAnime(query:string):Observable<TitleModel>{
-    // let params= new HttpParams()
-    // .set('query',query)
+
     const body={query}
 
     return this.http.post<TitleModel>(this.API+'/title',body)
